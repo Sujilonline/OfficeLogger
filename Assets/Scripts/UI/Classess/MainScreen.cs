@@ -2,6 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using OfficeLogger.UIFrameWork;
+
+
 namespace OfficeLogger
 {
     public class MainScreen : UIWindowBase
