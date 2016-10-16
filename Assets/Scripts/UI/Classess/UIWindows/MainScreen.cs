@@ -7,7 +7,7 @@ using OfficeLogger;
 
 namespace OfficeLogger
 {
-    public class MainScreen : UIWindowBase
+    public class MainScreen : MonoBehaviour
     {
         public ProjectDetailsScreen projectDetailsScreen;
         public TimerScreen timerScreen;

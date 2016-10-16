@@ -22,20 +22,17 @@ namespace OfficeLogger
         public void SelectAccount (int accountId)
         {
             Debug.Log("Selected account " + accountId);
+            List<string> he = new List<string>();
+            he.Add("Project1");
+            he.Add("IMF");
+            he.Add("Cheta");
+            he.Add("Tooin");
+            UIController.GetPopup<ProjectSelectionPopup>().Show(he);
         }
 
         public void RemoveAccount (int accountId)
         {
-            TestApp.GetInstance().userAccounts = TestApp.GetInstance().userAccounts.Where(val => val.uniqueId != accountId).ToArray();
-//
-//            for (int i = 0 ; i < TestApp.GetInstance().userAccounts.Length; i++)
-//            {
-//                if (TestApp.GetInstance().userAccounts[i].uniqueId == accountId)
-//                {
-//                    TestApp.GetInstance().userAccounts = TestApp.GetInstance().userAccounts.Where(val => val.uniqueId != accountId).ToArray();
-//                    break;
-//                }
-//            }
+            TestApp.GetInstance().userAccounts = TestApp.GetInstance().userAccounts.Where(val => val.uniqueId != accountId).ToList();
             CheckForLocalAccounts();
         }
 
@@ -64,7 +61,7 @@ namespace OfficeLogger
             {
                 ClearList(accountsRectTracker);
                 accountsRectTracker = new List<GameObject>();
-                UserAccount[] allAccounts = TestApp.GetInstance().userAccounts;
+                UserAccount[] allAccounts = TestApp.GetInstance().userAccounts.ToArray();
 
                 foreach (var item in allAccounts)
                 {

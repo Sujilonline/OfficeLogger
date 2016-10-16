@@ -34,8 +34,27 @@ namespace OfficeLogger
             createAccountBtn.onClick.RemoveAllListeners();
             backBtn.onClick.RemoveAllListeners();
         }
+
         private void CreateAccount ()
         {
+            if (string.IsNullOrEmpty(fullNameIF.text.ToString()) ||
+                string.IsNullOrEmpty(fullNameIF.text.ToString()) ||
+                string.IsNullOrEmpty(fullNameIF.text.ToString()) ||
+                string.IsNullOrEmpty(fullNameIF.text.ToString()) ||
+                string.IsNullOrEmpty(fullNameIF.text.ToString()))
+            {
+                Debug.Log("Fill all the fields");
+            }
+            else
+            {
+                UserAccount newAccount = new UserAccount();
+                newAccount.username = fullNameIF.text.ToString();
+                TestApp.GetInstance().lastIndex = TestApp.GetInstance().lastIndex+ 2;
+                newAccount.uniqueId = TestApp.GetInstance().lastIndex;
+                TestApp.GetInstance().AddUser(newAccount);
+                //TODO Handle Properly- Guid to next window
+                MoveBackToPreUI();
+            }
             
         }
 
