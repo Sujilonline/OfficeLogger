@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace OfficeLogger.UIFrameWork 
+namespace OfficeLogger 
 {
     public class UIWindowBase : MonoBehaviour, IWindow
     {
@@ -17,11 +17,11 @@ namespace OfficeLogger.UIFrameWork
             }
         }
 
-        protected void RegisterUIEvents ()
+        protected virtual void RegisterUIEvents ()
         {
             
         }
-        protected void UnRegisterUIEvents ()
+        protected virtual void UnRegisterUIEvents ()
         {
             
         }
@@ -32,18 +32,19 @@ namespace OfficeLogger.UIFrameWork
             RegisterUIEvents();
             OnAfterActivate();
         }
-        public void OnAfterActivate()
+        public virtual void OnAfterActivate()
         {
+            
         }
         
-        public void Deactivate()
+        public virtual void Deactivate()
         {
             this.gameObject.SetActive(false);
             UnRegisterUIEvents();
             OnBeforeDeactivate();
         }
         
-        public void OnBeforeDeactivate()
+        public virtual void OnBeforeDeactivate()
         {
             
         }

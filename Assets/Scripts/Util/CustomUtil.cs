@@ -18,6 +18,4 @@ public class CustomUtil
     {
         return item1 + "_" + item2;
     }
-
-
 }
