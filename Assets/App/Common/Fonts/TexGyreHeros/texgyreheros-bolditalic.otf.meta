@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 4993e07055bb346a6a70732e7bbe484b
+timeCreated: 1470619777
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - TeX Gyre Heros
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 09b2cc7bf19a94856ac3e0d124a46697, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
